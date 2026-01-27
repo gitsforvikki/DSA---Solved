@@ -33,3 +33,20 @@ function removeElement(arr, val) {
 // const arr = [12, 23, 23, 1, 10, 15, 20, 23, 23, 23, 24];
 // const result = removeElement(arr, 23);
 // console.log(result);
+
+/**
+ * reverse areay of string in-place with o(1) space complexity
+ */
+
+function swapStrngArray(arr) {
+  for (let i = 0; i < arr.length / 2; i++) {
+    let temp = arr[arr.length - i - 1];
+    arr[arr.length - i - 1] = arr[i];
+    arr[i] = temp;
+  }
+  return arr;
+}
+// const stringArr = ["v", "i", "k", "l", "i"];
+
+// const result = swapStrngArray(stringArr);
+// console.log(result);
