@@ -50,3 +50,49 @@ function swapStrngArray(arr) {
 
 // const result = swapStrngArray(stringArr);
 // console.log(result);
+
+/**
+ * 
+ * You are given an array prices where prices[i] is the price of a given stock on the ith day.
+ * You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in 
+ * the future to sell that stock.Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+ * 
+ */
+
+//Brute-force 
+// function getMaxProfit(arr) {
+//   let maxProfit = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[j] > arr[i]) {
+//         temp = arr[j] - arr[i];
+//         if (temp > maxProfit) {
+//           maxProfit = temp;
+//         }
+//       }
+//     }
+//   }
+//   return maxProfit;
+// }
+
+// with O(n) time
+function getMaxProfit(arr) {
+  let maxProfit = 0;
+  let x = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[x] > arr[i]) {
+      x = i;
+    } else {
+      temp = arr[i] - arr[x];
+      if (temp > maxProfit) {
+        maxProfit = temp;
+      }
+    }
+  }
+  return maxProfit;
+}
+
+// const stock = [1, 10, 5, 4, 6, 20];
+// const result = getMaxProfit(stock);
+// console.log(result);
