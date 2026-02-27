@@ -1,3 +1,4 @@
+
 function removeDuplicate(arr) {
   let uniqueIndex = 0;
   if (arr.length === 0) return 1;

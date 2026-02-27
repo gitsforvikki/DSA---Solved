@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "code":"nodemon app.js"
+    "code":"nodemon app.js",
+    "recursion" : "node app.js"
   },
   "keywords": [],
   "author": "",
