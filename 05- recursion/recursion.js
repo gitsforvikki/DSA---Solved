@@ -10,16 +10,18 @@ function print(nums) {
 const a = 10;
 // print(a);
 
-//print 1-10
+//write a function for print 1 to 10
+
 function printOne(nums) {
   if (nums > 10) return;
   console.log(nums);
   printOne(++nums);
 }
-
 // printOne(1);
 
-//calculate the sum of n numbers with recursion
+/**
+ * calculate the sum of n numbers with recursion
+ */
 function sum(n) {
   if (n == 0) return 0;
   return n + sum(n - 1);
@@ -27,7 +29,10 @@ function sum(n) {
 
 // console.log("Sum of 10 numbers: " + sum(10));
 
-//calculate the sum of all numbers of a array
+/**
+ * calculate the sum of all numbers of a array
+ */
+
 let array = [1, 2, 3, 4, 5];
 
 // Approach -01
@@ -42,6 +47,7 @@ function arraySum(arr) {
  * So below is the optimized solution based on index
  *
  */
+
 //Approach -02
 
 function arraySum2(arr, index = 0) {
@@ -61,4 +67,17 @@ function evenSum(arr, n) {
   return arr[n] % 2 == 0 ? arr[n] + evenSum(arr, n - 1) : evenSum(arr, n - 1);
 }
 
-console.log(evenSum(array, array.length - 1));
+// console.log(evenSum(array, array.length - 1));
+
+/**
+ * Calculate factorial of a number
+ */
+function calcFactorial(n) {
+  if (n < 1) return 1;
+  return n * calcFactorial(n - 1);
+}
+
+const factorial = calcFactorial(5);
+console.log("factorial " + factorial);
+
+
