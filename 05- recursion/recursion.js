@@ -56,7 +56,7 @@ function arraySum2(arr, index = 0) {
   }
   return arr[index] + arraySum2(arr, index + 1);
 }
-console.log(arraySum2(array));
+// console.log(arraySum2(array));
 
 /**
  * some of all even numbers in a array
@@ -77,7 +77,16 @@ function calcFactorial(n) {
   return n * calcFactorial(n - 1);
 }
 
-const factorial = calcFactorial(5);
-console.log("factorial " + factorial);
+// const factorial = calcFactorial(5);
+// console.log("factorial " + factorial);
 
+/**
+ * Is a number power of two
+ */
 
+function powerOfTwo(n) {
+  if (n == 1) return true;
+  if (n < 1 || n % 2 != 0) return false;
+  return powerOfTwo(n / 2);
+}
+console.log(powerOfTwo(160));
