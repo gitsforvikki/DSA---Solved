@@ -89,4 +89,23 @@ function powerOfTwo(n) {
   if (n < 1 || n % 2 != 0) return false;
   return powerOfTwo(n / 2);
 }
-console.log(powerOfTwo(160));
+// console.log(powerOfTwo(160));
+
+/**
+ * Fibonacci series:- This is the series where each number is the sum of its two preceding number and first two numbers are 0 and 1
+ *  respectively. that is 0,1,1,2,3,5,8,13,21......
+ */
+
+//find out the number at the nth position in the fibonacci series
+
+/**
+ * this below function will forming two branchs of it at every recursive call as we are 
+ * return two function call like   fin(n - 1) + fib(n - 2). When it reach to the base case it bubble up and keep
+ * calculation the values
+ */
+
+function fib(n) {
+  if (n >= 30 || n < 0) return "Invalid input";
+  if (n == 0 || n == 1) return n;
+  return fin(n - 1) + fib(n - 2);
+}
