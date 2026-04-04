@@ -127,4 +127,28 @@ function selection_sort(arr) {
   return arr;
 }
 
-console.log(selection_sort([1, 12, 5, 7, 10,-7]));
+// console.log(selection_sort([1, 12, 5, 7, 10, -7]));
+
+/**
+ * Inserton sort:-
+ * - This is a sorting algo where i select each single element at a time and check and place it
+ *    in the correct postion in the previous sorted  part of the array.
+ *
+ *  While perform this sorting also assume first element at the sorted position and start selecting
+ *   the next element from the second potions ie i=1
+ */
+function insertion_sort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let curr = arr[i];
+    let prev = i - 1;
+
+    while (arr[prev] > curr && prev >= 0) {
+      arr[prev + 1] = arr[prev];
+      prev--;
+    }
+    arr[prev + 1] = curr;
+  }
+  return arr;
+}
+
+console.log(insertion_sort([1, 12, 5, 7, 10, 27]));
